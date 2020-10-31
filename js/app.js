@@ -53,4 +53,5 @@ async function init(e) {
   }
 }
 
-document.querySelector('#showVideo').addEventListener('click', e => init(e));
+const newLocal = '#showVideo';
+document.querySelector(newLocal).addEventListener('click', e => init(e));
