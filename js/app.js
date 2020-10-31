@@ -55,3 +55,10 @@ async function init(e) {
 
 const newLocal = '#showVideo';
 document.querySelector(newLocal).addEventListener('click', e => init(e));
+
+const button = document.querySelector('#takeSnap');
+button.onclick = function() {
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+};
