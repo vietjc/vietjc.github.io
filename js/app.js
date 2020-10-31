@@ -24,10 +24,4 @@ function handleError(error) {
   console.log('getUserMedia error: ', error);
 }
 
-//navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
-navigator.getUserMedia = (navigator.getUserMedia ||
-    navigator.webkitGetUserMedia ||
-    navigator.mozGetUserMedia ||
-    navigator.msGetUserMedia ||
-    false);
-navigator.getUserMedia({ video: true, audio: false }, handleSuccess, handleError);
+navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
