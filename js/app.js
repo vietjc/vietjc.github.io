@@ -53,9 +53,12 @@ async function init(e) {
   }
 }
 
-const newLocal = '#showVideo';
-document.querySelector(newLocal).addEventListener('click', e => init(e));
+document.querySelector('#showVideo').addEventListener('click', e => init(e));
 
+const video = document.querySelector('video');
+const canvas = window.canvas = document.querySelector('canvas');
+canvas.width = 480;
+canvas.height = 360;
 const button = document.querySelector('#takeSnap');
 button.onclick = function() {
   canvas.width = video.videoWidth;
