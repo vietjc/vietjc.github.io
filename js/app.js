@@ -1,11 +1,9 @@
 'use strict';
 
 window.onload = () => {
-  'use strict';
-
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('./serviceWorker.js?v=20');
+             .register('./serviceWorker.js?v=22');
   }
 }
 
